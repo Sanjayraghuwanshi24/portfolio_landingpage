@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #skill-section {
+            width: 100%;
+            height: 100vh;
+            padding: 80px 13%;
+            background-color: rgb(6, 6, 6);
+        }
+
+        .header-skill-head {
+            width: 100%;
+            margin-bottom: 70px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .header-skill-head h2 {
+            color: white;
+            margin-bottom: -5px;
+            font-size: 75px;
+            width: 1130px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .header-skill-head h2 span {
+            color: #f9004d;
+        }
+
+        .header-skill-head p {
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+
+
+        .skill-main {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 50px;
+            grid-row-gap: 20px;
+        }
+
+        .skill-main .skill-bar .info {
+            display: flex;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: space-between;
+            padding: 0px 10px;
+            color: white;
+        }
+
+        .skill-bar .bar {
+            width: 100%;
+            height: 10px;
+            position: relative;
+            background-color: rgb(251, 251, 251);
+            border-radius: 25px;
+            margin-top: 5px;
+        }
+
+        .skill-bar .bar span {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            background-color: #f9004d;
+            border-radius: 25px;
+        }
+
+        .percent {
+            color: white;
+            font-weight: bold;
+        }
+
+        .skill-bar .bar .html {
+            width: 96%;
+            animation: HTML 3s;
+        }
+
+        @keyframes HTML {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 96%;
+            }
+        }
+
+        .skill-bar .bar .css {
+            width: 90%;
+            animation: CSS 3s;
+        }
+
+        @keyframes CSS {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        .skill-bar .bar .bootstrap {
+            width: 88%;
+            animation: Bootstrap 3s;
+        }
+
+        @keyframes Bootstrap {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 88%;
+            }
+        }
+
+        .skill-bar .bar .react {
+            width: 90%;
+            animation: React 3s;
+        }
+
+        @keyframes React {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        .skill-bar .bar .php {
+            width: 90%;
+            animation: PHP 3s;
+        }
+
+        @keyframes PHP {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        .skill-bar .bar .javascript {
+            width: 90%;
+            animation: Java Script 3s;
+        }
+
+        @keyframes JavaScript {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        .skill-bar .bar .mysql {
+            width: 90%;
+            animation: MYSQL 3s;
+        }
+
+        @keyframes MYSQL {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        .skill-bar .bar .cpp {
+            width: 90%;
+            animation: CPP 3s;
+        }
+
+        @keyframes CPP {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        .skill-bar .bar .javascript {
+            width: 90%;
+            animation: JavaScript 3s;
+        }
+
+        @keyframes JavaScript {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        .skill-bar .bar .kotlin {
+            width: 90%;
+            animation: KOTLIN 3s;
+        }
+
+        @keyframes KOTLIN {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="skill-section">
+        <div class="header-skill-head">
+            <h2>My<span> Skills</span></h2>
+            <p>Here is my skills to represent my expertise</p>
+        </div>
+        <div class="skill-main">
+            <div class="skill-bar">
+                <div class="info">
+                    <p>HTML</p>
+                    <P class="percent">96%</P>
+                </div>
+                <div class="bar">
+                    <span class="html"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>CSS</p>
+                    <P class="percent">90%</P>
+                </div>
+                <div class="bar">
+                    <span class="css"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+
+                <div class="info">
+                    <p>Bootstrap</p>
+                    <P class="percent">88%</P>
+                </div>
+                <div class="bar">
+                    <span class="bootstrap"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>React</p>
+                    <P class="percent">90%</P>
+                </div>
+                <div class="bar">
+                    <span class="react"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>PHP</p>
+                    <P class="percent">90%</P>
+                </div>
+                <div class="bar">
+                    <span class="php"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>JavaScript</p>
+                    <P class="percent">90% </P>
+                </div>
+                <div class="bar">
+                    <span class="javascript"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>MYSQL</p>
+                    <P class="percent">94%</P>
+                </div>
+                <div class="bar">
+                    <span class="mysql"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>CPP</p>
+                    <P class="percent">94% </p>
+                </div>
+                <div class="bar">
+                    <span class="cpp"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>KOTLIN</p>
+                    <P class="percent">93%</P>
+                </div>
+                <div class="bar">
+                    <span class="kotlin"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

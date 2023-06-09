@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Baloo Bhai', cursive; */
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.5rem;
+}
+/* html{ 
+    font-size: 62.5%;
+    border-radius: 62.5%;
+    padding: 0.5%;
+    letter-spacing: 62.5%;
+    margin: 0.5%;
+    margin-bottom: 43.5%;
+    margin-top: 4.5%;
+} */
+
+:root {
+    --bg-color: #101010;
+    --secound-bg-color: #191919;
+    --text-color: #fff;
+    --secound-color: #c6c9d8bf;
+    --main-color: #f9004d;
+    --big-font: 5.3rem;
+    --h2-fontt: 4.2rem;
+    --p-font: 1.1rem;
+    --t-color:#fcfc;
+
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition-duration: .3s;
+}
+
+.logo {
+    display: flex;
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav li {
+    position: relative;
+    list-style: none;
+}
+
+.nav a {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+    left: 0;
+    bottom: -4px;
+    transition: ease .40s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+#menu-icon {
+    font-size: 32px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.h-btn {
+    padding: 0 20px;
+    height: 40px;
+    display: inline-block;
+    line-height: 42px;
+    background: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all .30s;
+}
+
+section {
+    padding: 120px 15%;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background: var(--bg-color);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+.intro h1 {
+    margin: 20px 0px 20px;
+    font-size: var(--big-font);
+}
+
+span {
+    color: var(--main-color);
+}
+
+.intro h3 {
+    font-size: 25px;
+    margin-bottom: 55px;
+}
+
+.intro h4 {
+    color: #585c63;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+}
+/* .me3, 
+.skills {
+    width: 100%;
+    padding: 100px 0px;
+    background-color:var(--bg-color);
+}
+
+.me3 img {
+    height: auto;
+    width: 430px;
+}
+
+.me3-text {
+    width: 550px;
+}
+
+.abc {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.me3-text h2 {
+    color:var(--text-color);
+    font-size: 7.5rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.me3-text h5 {
+    color:var(--text-color);
+    letter-spacing: .2rem;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    text-transform: capitalize;
+}
+
+.me3-text p {
+    color: var(--t-color);
+    letter-spacing: .1rem;
+    line-height: 28px;
+    font-size: 1.8rem;
+    margin-bottom: 4.5rem;
+}
+
+button {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 1.3rem 3rem;
+    border-radius: 3rem;
+    transition: .4s;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+}
+
+.education {
+    background-color: var(--bg-color);
+    width: 100%;
+    padding: 10rem 0rem;
+}
+
+.title h2 {
+    color: var(--text-color);
+    font-size: 7.5rem;
+    width: 1130px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.boss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.card {
+    height: 365px;
+    width: 335px;
+    padding: 2rem 3.5rem;
+    background: var(--bg-color);
+    border-radius: 2rem;
+    margin: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card i {
+    font-size: 5rem;
+    display: block;
+    text-align: center;
+    margin: 2.5rem 0rem;
+    color: var(--main-color);
+}
+
+.pra p {
+    color: var(--t-color);
+    font-size: 1.6rem;
+    line-height: 27px;
+    margin-bottom: 2.5rem;
+}
+
+/* .sanju{ */
+/* display: flex; */
+/* position: relative; */
+/* align-items: center; */
+/* text-align: center; */
+/* gap: 8rem; */
+/* margin-top: 2rem; */
+
+/* } 
+
+#skill-section {
+    width: 100%;
+    height: 100vh;
+    padding: 8rem 13%;
+    background-color: rgb(6, 6, 6);
+}
+
+.header-skill-head {
+    width: 100%;
+    margin-bottom: 7rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.header-skill-head h2 {
+    color: white;
+    margin-bottom: -5px;
+    font-size: 7.5rem;
+    width: 1130px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.header-skill-head h2 span {
+    color: #f9004d;
+}
+
+.header-skill-head p {
+    color: white;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+
+
+.skill-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+}
+
+.skill-main .skill-bar .info {
+    display: flex;
+    font-weight: bold;
+    font-size: 2rem;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    color: white;
+}
+
+.skill-bar .bar {
+    width: 100%;
+    height: 10px;
+    position: relative;
+    background-color: rgb(251, 251, 251);
+    border-radius: 2.5rem;
+    margin-top: 5rem;
+}
+
+.skill-bar .bar span {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: #f9004d;
+    border-radius: 2.5rem;
+}
+
+.percent {
+    color: white;
+    font-weight: bold;
+}
+
+.skill-bar .bar .html {
+    width: 96%;
+    animation: HTML 3s;
+}
+
+@keyframes HTML {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 96%;
+    }
+}
+
+.skill-bar .bar .css {
+    width: 90%;
+    animation: CSS 3s;
+}
+
+@keyframes CSS {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .bootstrap {
+    width: 88%;
+    animation: Bootstrap 3s;
+}
+
+@keyframes Bootstrap {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 88%;
+    }
+}
+
+.skill-bar .bar .react {
+    width: 90%;
+    animation: React 3s;
+}
+
+@keyframes React {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .php {
+    width: 90%;
+    animation: PHP 3s;
+}
+
+@keyframes PHP {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .javascript {
+    width: 90%;
+    animation: Java Script 3s;
+}
+
+@keyframes JavaScript {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .mysql {
+    width: 90%;
+    animation: MYSQL 3s;
+}
+
+@keyframes MYSQL {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .cpp {
+    width: 90%;
+    animation: CPP 3s;
+}
+
+@keyframes CPP {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .javascript {
+    width: 90%;
+    animation: JavaScript 3s;
+}
+
+@keyframes JavaScript {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.skill-bar .bar .kotlin {
+    width: 90%;
+    animation: KOTLIN 3s;
+}
+
+@keyframes KOTLIN {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.metwo {
+    width: 100%;
+    height: 75vh;
+    background: #191919;
+} */
+@media (max-width:1120px){
+    header{
+        padding: 14px 2%;
+    }
+    .home{
+        height: 85vh;
+    }
+    #menu-icon{
+        display: block;
+    }.nav{
+        position: absolute;
+        top: -600px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--main-color);
+        text-align: left;
+        transition: all .35s ease;
+    }
+    .navlist a{
+        display: block;
+        padding: 1rem;
+        margin: 1.2rem;
+        border-left: 2px solid var(--text-color);
+    }
+    .navlist a:hover{
+        background: var(--text-color);
+        color: var(--secound-color);
+        border: none;
+    }
+    .navlist.active{
+        top: 100%;
+    }
+   
+}
